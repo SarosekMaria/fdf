@@ -6,7 +6,7 @@
 /*   By: sassassi <sassassi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/23 15:25:15 by sassassi          #+#    #+#             */
-/*   Updated: 2020/10/18 12:25:11 by sassassi         ###   ########.fr       */
+/*   Updated: 2020/10/18 12:54:46 by sassassi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,14 +136,6 @@ int					get_next_line(const int fd, char **line)
 	*line = new;
 	return (1);
 }
-//-----------------------------------------------------
-
-
-
-
-
-
-
 
 int		ft_wordcount(char const *s, char c)
 {
@@ -320,10 +312,9 @@ int			main(int argc, char **argv)
 	data  = (fdf*)malloc(sizeof(fdf));
 	read_map(data, argv[1]);
 	
-	int i;
-	i = argc;
-/*	int j;
-   data->zoom = 10;
+	int	i;
+	int j;
+	data->zoom = 10;
 	i = argc;
 	i = 0;
 	data->shift = 1;
@@ -332,13 +323,13 @@ int			main(int argc, char **argv)
 		j = 0;
 		while (j < data->width)
 		{
-			ft_printf("%3d", data->map[i][j]);
+			ft_printf("%12d ", data->colors[i][j]);
 			j++;
 		}
 		ft_printf("\n");
 		i++;
 	}
-
+/*
 	data->mlx = mlx_init();
 	data->win = mlx_new_window(data->mlx, 1000, 800, "fdf");
 
